@@ -7,7 +7,7 @@ class Category(db.Model):
     tasks = db.relationship("Task", backref="category", cascade="all, delete", lazy=True)
 
     def __repr__(self):
-        return self
+        return self.category_name
 
 
 class Task(db.Model):
